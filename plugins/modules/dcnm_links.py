@@ -3672,7 +3672,7 @@ class DcnmLinks:
         managable_ip = [
             (key, self.inventory_data[key]["serialNumber"])
             for key in self.inventory_data
-            if str(self.inventory_data[key]["managable"]).lower() == "true" or str(self.inventory_data[key]["unmanagableCause"]).lower() == "unreachable"
+            if str(self.inventory_data[key]["managable"]).lower() == "true"
         ]
         managable_hosts = [
             (
@@ -3680,7 +3680,7 @@ class DcnmLinks:
                 self.inventory_data[key]["serialNumber"],
             )
             for key in self.inventory_data
-            if str(self.inventory_data[key]["managable"]).lower() == "true" or str(self.inventory_data[key]["unmanagableCause"]).lower() == "unreachable"
+            if str(self.inventory_data[key]["managable"]).lower() == "true"
         ]
         self.managable = dict(managable_ip + managable_hosts)
 

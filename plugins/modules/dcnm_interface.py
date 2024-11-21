@@ -4970,7 +4970,7 @@ class DcnmIntf:
             managable_ip = [
                 (key, self.inventory_data[key]["serialNumber"])
                 for key in self.inventory_data
-                if str(self.inventory_data[key]["managable"]).lower() == "true" or str(self.inventory_data[key]["unmanagableCause"]).lower() == "unreachable" or str(self.inventory_data[key]["unmanagableCause"]).lower().startswith("discover")
+                if str(self.inventory_data[key]["managable"]).lower() == "true"
             ]
             managable_hosts = [
                 (
@@ -4978,7 +4978,7 @@ class DcnmIntf:
                     self.inventory_data[key]["serialNumber"],
                 )
                 for key in self.inventory_data
-                if str(self.inventory_data[key]["managable"]).lower() == "true" or str(self.inventory_data[key]["unmanagableCause"]).lower() == "unreachable" or str(self.inventory_data[key]["unmanagableCause"]).lower().startswith("discover")
+                if str(self.inventory_data[key]["managable"]).lower() == "true"
             ]
 
             managable = dict(managable_ip + managable_hosts)
